@@ -3,18 +3,23 @@ package dev.abibou.pms.DAO;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import dev.abibou.pms.dto.Product;
 
 public class ProductDAOImpl implements ProductDAO {
 	
-	@Autowired
-	ProductDAO productDAO;
+	private JdbcTemplate jt;
+	
+	public void setJS(JdbcTemplate jt) {
+		this.jt=jt;
+	}
 	
 	@Override
 	public int saveProduct(Product product) {
-		// TODO Auto-generated method stub
-		return 0;
+		String sql = "insert into product_dtls values("+product.getProductID()+",'"+product.getProductName()+"',"+product.getProductPrice()+")";
+		int n = jt.update(sql);
+		return n;
 	}
 
 	@Override
@@ -25,14 +30,16 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Override
 	public int updateProduct(int productID, Product product) {
-		// TODO Auto-generated method stub
-		return 0;
+		String sql = "update product_dtls set product_name='"+product.getProductName()+"',product_price="+product.getProductPrice()+" where product_id="+productID;
+		int n = jt.update(sql);
+		return n;
 	}
 
 	@Override
 	public int deleteByID(int productID) {
-		// TODO Auto-generated method stub
-		return 0;
+		String sql = "delete from product_dtls where product_id="+productID;
+		int n = jt.update(sql);
+		return n;
 	}
 
 	@Override
