@@ -41,6 +41,9 @@ public class PMSLauncher
   				service.createProduct(product);;
   				break;
   			 case 2:
+  				System.out.print("enter product id to search: ");
+  				pid = sc.nextInt();
+  				service.findProductByID(pid);
   				break;
   			 case 3:
   				break;
@@ -50,6 +53,7 @@ public class PMSLauncher
   				service.deleteProductByID(pid);;
   				break;
   			 case 5:
+  				 service.findAllProducts();
   				break;
   			 case 6:
   				System.out.println("---- application designed & developed by dev@abibou ----");

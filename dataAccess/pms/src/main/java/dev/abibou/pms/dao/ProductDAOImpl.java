@@ -3,8 +3,10 @@ package dev.abibou.pms.dao;
 import java.util.List;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
 import dev.abibou.pms.dto.Product;
+import dev.abibou.pms.rowmapper.ProductRowMapper;
 
 public class ProductDAOImpl implements ProductDAO {
 
@@ -23,8 +25,13 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Override
 	public Product findByID(int productID) {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "select * from product_dtls where product_id="+productID;
+		
+		Product product = jt.queryForObject(sql, new ProductRowMapper());
+		
+		
+		
+		return product;
 	}
 
 	@Override
@@ -43,8 +50,10 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Override
 	public List<Product> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "select * from product_dtls";
+		List<Product> products = jt.query(sql, new ProductRowMapper());
+		
+		return products;
 	}
 
 }

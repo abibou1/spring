@@ -27,8 +27,17 @@ public class ProductServiceImpl implements ProductServices {
 
 	@Override
 	public Product findProductByID(int productID) {
+		Product product = productDAO.findByID(productID);
+		
+		if(product == null) {
+			System.out.println("This product does not exist in the Stock.");
+			return null;
+		}
+		else {
+			System.out.println(product.toString());
+		}
 
-		return null;
+		return product;
 	}
 
 	@Override
@@ -59,8 +68,13 @@ public class ProductServiceImpl implements ProductServices {
 
 	@Override
 	public List<Product> findAllProducts() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Product> products = productDAO.findAll();
+		
+		for(Product product: products) {
+			System.out.println(product.toString());
+		}
+		
+		return products;
 	}
 
 }
