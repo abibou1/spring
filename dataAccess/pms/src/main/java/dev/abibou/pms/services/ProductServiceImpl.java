@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import dev.abibou.pms.DAO.ProductDAO;
+import dev.abibou.pms.dao.ProductDAO;
 import dev.abibou.pms.dto.Product;
 
 public class ProductServiceImpl implements ProductServices {

@@ -9,10 +9,6 @@ import dev.abibou.pms.dto.Product;
 import dev.abibou.pms.services.ProductServices;
 
 
-/**
- * Hello world!
- *
- */
 public class PMSLauncher 
 {
 	private static Scanner sc = new Scanner(System.in);
@@ -56,7 +52,7 @@ public class PMSLauncher
   			 case 5:
   				break;
   			 case 6:
-  				System.out.println("---- application designed & developed by team@edureka ----");
+  				System.out.println("---- application designed & developed by dev@abibou ----");
   				System.exit(0);
   				break;
   			 default:

@@ -18,10 +18,11 @@
 		<property name="dataSource" ref="ds"/>
 	</bean>
 	
-	<bean class="dev.abibou.pms.DAO.ProductDAOImpl">
+	<bean class="dev.abibou.pms.dao.ProductDAOImpl">
 		<property name="jt" ref="template"/>
 	</bean>
 	
 	<bean id="product-service" class="dev.abibou.pms.services.ProductServiceImpl"/>
+	
 	
 </beans>

@@ -1,17 +1,16 @@
-package dev.abibou.pms.DAO;
+package dev.abibou.pms.dao;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import dev.abibou.pms.dto.Product;
 
 public class ProductDAOImpl implements ProductDAO {
-	
+
 	private JdbcTemplate jt;
 	
-	public void setJS(JdbcTemplate jt) {
+	public void setJt(JdbcTemplate jt) {
 		this.jt=jt;
 	}
 	

@@ -1,4 +1,4 @@
-package dev.abibou.pms.DAO;
+package dev.abibou.pms.dao;
 
 import java.util.List;
 
