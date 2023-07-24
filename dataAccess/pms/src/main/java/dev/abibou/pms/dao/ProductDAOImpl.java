@@ -28,6 +28,7 @@ public class ProductDAOImpl implements ProductDAO {
 		String sql = "select * from product_dtls where product_id="+productID;
 		
 		Product product = jt.queryForObject(sql, new ProductRowMapper());
+		// new RowMapper<Product>()
 		
 		
 		
