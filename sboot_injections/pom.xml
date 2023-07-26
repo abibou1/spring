@@ -12,7 +12,7 @@
 	<artifactId>boot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sboot_injections</name>
-	<description>Demo for field, setter, and contructor injections</description>
+	<description>Demo for field, setter, and constructor injections</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
