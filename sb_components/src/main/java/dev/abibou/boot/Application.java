@@ -27,7 +27,7 @@ public class Application {
 		Ticket tkt = (Ticket)context.getBean(Ticket.class);
 		System.out.println(tkt);
 		
-		PasswordEncoder encoder = (PasswordEncoder) context.getBean("getEncoder");
+		 PasswordEncoder encoder = (PasswordEncoder) context.getBean("getEncoder");
 		String myPwd = "LetmeIn$123";
 		String encodedPwd = encoder.encodePassword(myPwd);
 		System.out.println("encoded password = " + encodedPwd);
