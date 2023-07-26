@@ -19,7 +19,7 @@ public class Car {
 			System.out.println("Nice trip!");
 		}
 		else {
-			System.out.println("Trip cancelled!");
+			System.err.println("Trip cancelled!");
 		}
 	}
 
