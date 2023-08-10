@@ -1,4 +1,4 @@
-package dev.abibou.security;
+package dev.abibou.rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
