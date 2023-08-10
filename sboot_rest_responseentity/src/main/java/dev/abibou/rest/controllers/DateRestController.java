@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DateRestController {
 	
-	@GetMapping("/today")
+	@GetMapping(path = {"/today", "date"})
 	public ResponseEntity<String> getDate(){
 		LocalDateTime dateTimeObj = LocalDateTime.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm:ss");
@@ -22,7 +22,7 @@ public class DateRestController {
 		headers.add("company", "personal");
 		headers.add("today", dateTime);
 		
-		return new ResponseEntity<String>("Hello", headers, HttpStatus.OK);
+		return new ResponseEntity<String>(dateTime, headers, HttpStatus.OK);
 		
 	}
 
