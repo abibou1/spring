@@ -14,10 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import dev.abibou.rest.entity.Ticket;
 import dev.abibou.rest.models.Passenger;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
 
 
 @RestController
 @RequestMapping("/irctc")
+@OpenAPIDefinition(info = @Info(title = "IRCTC API Definition", version="2.0", description="Train Ticket Booking App"))
 public class TicketRestController {
 	
 	@PostMapping(path = "/ticket/new",
